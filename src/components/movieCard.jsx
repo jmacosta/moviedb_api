@@ -1,14 +1,14 @@
 import React, {useState} from 'react';
 
 
-function MovieCard(movie){
+function MovieCard(props){
 
-const[movies,setmovies] = useState(['https://image.tmdb.org/t/p/w185/A4jt7Gqa7dRT2ZIo3hNHc4esw3d.jpg'])
+
+
 return(
     <div>
-        <img src={movie} alt="Movies" />
-        
-
+        <img src={'https://image.tmdb.org/t/p/w185'+ props.poster_path} alt={props.title} />
+=
     </div>
 );
 }
