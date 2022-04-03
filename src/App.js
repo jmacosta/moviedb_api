@@ -5,21 +5,18 @@ import MovieCard from "./components/movieCard.jsx";
 function App() {
   return (
     <div>
-      <ul>  
-        {data.results.map((movie)=>(
-         <li key={movie.id}>
-           <ul>
-           {/*<li><img src={'https://image.tmdb.org/t/p/w185'+ movie.poster_path}  alt={movie.title} /></li>*/}
-           <MovieCard movie/>
-           <li>{movie.title} </li>
-           <li>{movie.release_date}</li>
-           </ul>
+      <header>
 
-         </li>
-         
-        ))}
-       
-      </ul>
+      </header>
+
+      <section id="popularMovies" >
+        <div>
+          <h2>Películas Populares</h2>
+        </div>
+        <div className= "popularMovies">
+            {data.results.map((movie)=>(<MovieCard key= {movie.id} {...movie} /> ))}
+        </div>
+      </section>    
       <aside>
         {/* detalles de la pelicula elegida */}
       </aside>
