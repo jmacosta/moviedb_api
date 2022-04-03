@@ -26,8 +26,10 @@
 .movieCard{
   display: flex;
   flex-direction: column;  
+  padding: 1em;
 }
 .popularMovies {
   display:flex;
   flex-direction: row;
+    
 }
